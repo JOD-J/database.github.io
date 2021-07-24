@@ -91,10 +91,11 @@ module.exports = {
 		// открывает браузер по умолчанию 
 		open: true,
 		port: 3000,
+		// изменение css
 		hot: true,
 		compress: true,
 		overlay: true,
-		writeToDisk: true,
+		// writeToDisk: true,
 		historyApiFallback: true,
 	},
 	// мапы для дев разработки 

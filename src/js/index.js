@@ -1,9 +1,7 @@
-
 import '../html/index.html';
-import '../css/style.css';
 import '../scss/style.scss';
 
-(() => {
-	const str = 'world';
-	console.log(`helo ${str}`);
-})();
+import headerBtnBurger from './modules/headerBtnBurger';
+headerBtnBurger();
+import headerAccordionBtn from './modules/headerAccordionBtn';
+headerAccordionBtn();

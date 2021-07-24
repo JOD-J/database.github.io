@@ -1,0 +1,103 @@
+.header__popup {
+display: none;
+}
+@media (max-width: 768px) {
+	.header__popup {
+		display: block;
+		z-index: 100;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		transform: translateX(100%);
+		padding: 10px;
+		border: 1px solid silver;
+		background: rgb(72,67,162);
+		background: linear-gradient(90deg, rgba(72,67,162,1) 0%, rgba(78,78,196,1) 38%, rgba(103,160,209,1) 73%, rgba(0,212,255,1) 100%);
+	}
+	.header__popup-nav {
+		display: flex;
+		justify-content: space-between;
+	}
+	.header__popup-nav-close {
+		display: block;
+		position: relative;
+		width: 20px;
+		height: 20px;
+		background: transparent;
+		order: 1;
+		&:before, &:after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #fff;
+			left: -5px;
+		}
+		&:before {
+			top: 2px;
+			transform: rotate(-45deg);
+			transform-origin: right center;
+		}
+		&:after {
+			bottom: 2px;
+			transform: rotate(45deg);
+			transform-origin: right center;
+		}
+	}
+	.header__popup-items-first {
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		order: 0;
+	}
+	.header__popup-item-first {
+		width: 100%;
+		border: 1px solid silver;
+		border-radius: 5px;
+		padding: 10px;
+		text-align: center;
+		margin-bottom: 5px;
+		transition: .5s;
+		box-shadow: 1px 1px 5px 1px silver;
+		&:hover {
+			box-shadow: 0 0 10px 0 silver inset, 0 0 10px 4px silver;
+
+		}
+	}
+	.header__popup-link-first {
+		width: 100px;
+		color: rgb(228, 221, 156);
+	}
+	.header__popup-items-last-annexes {
+		padding: 10px 20px;
+	}
+	.header__popup-item-lasts {
+		transition: 1s;
+		overflow: hidden;
+		height: 0;
+	}
+	.header__popup-item-last {
+		border: 1px solid silver;
+		border-radius: 5px;
+		padding: 10px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		transition: .5s;
+		box-shadow: -1px -1px 10px 1px silver;
+		&:hover {
+			transition: .5s;
+			box-shadow: 0 0 10px 0 silver inset, 0 0 10px 4px silver;
+			transform: scale(.9);
+		}
+	}
+	.header__popup-link-last {
+		color: rgb(228, 221, 156);
+	}
+	.header__popup-items-last-theory {
+		padding: 10px 20px;
+	}
+	.header__popup-items-last-paktika {
+		padding: 10px 20px;
+	}
+}

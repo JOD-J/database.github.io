@@ -1,5 +1,3 @@
-$main-color: green;
-
-body {
-	background: $main-color;
-}
+@import './modules/nullstyle.scss';
+@import './modules/header.scss';
+@import './modules/headerBtnBurger.scss';
