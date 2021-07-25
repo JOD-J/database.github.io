@@ -94,6 +94,7 @@
 	color: rgb(90, 65, 65);
 }
 .header__items-last {
+	// z-index: 2;
 	width: 100%;
 	display: none;
 	position: absolute;
@@ -101,6 +102,7 @@
 	margin: 6px 0 0 -5px;
 }
 .header__item-last {
+	background: rgb(255, 255, 255);
 	border: 1px solid silver;
 	border-radius: 5px;
 	margin: 5px;
@@ -127,7 +129,21 @@
 }
 .header__item-last-paktika {
 }
-
+.header__item-html-last {
+	&:hover {
+		box-shadow: 0 0 10px 0 red inset, 0 0 10px 4px red;
+	}
+}
+.header__item-css-last {
+	&:hover {
+		box-shadow: 0 0 10px 0 blue inset, 0 0 10px 4px blue;
+	}
+}
+.header__item-js-last {
+	&:hover {
+		box-shadow: 0 0 10px 0 yellow inset, 0 0 10px 4px yellow;
+	}
+}
 @media (max-width: 768px) {
 	.header__nav {
 		display: none;

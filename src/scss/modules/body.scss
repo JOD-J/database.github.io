@@ -1,0 +1,28 @@
+.body {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas: " header header" "aside main" "footer footer";
+	.header {
+		grid-area: header;
+	}
+	.aside {
+		grid-area: aside;
+	}
+	.main {
+		grid-area: main;
+		
+	}
+	.footer {
+		grid-area: footer;
+	}
+}
+
+@media (max-width: 768px) {
+	.body {
+		display: grid;
+		grid-template-columns:  1fr;
+		grid-template-rows: auto auto 1fr auto;
+		grid-template-areas: " header header" "aside aside" "main main" "footer footer";
+	}
+}

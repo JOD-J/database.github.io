@@ -1,18 +1,7 @@
-
+import accordion from './accordion';
 const headerAccordionBtn = () => {
 	const headerPopupNav = document.querySelector('.header__popup-nav');
-	const headerItemsLast = document.querySelectorAll('.header__popup-item-lasts');
-	const acardeon = () => {
-		headerItemsLast.forEach(item => {
-			item.style.height = '0px';
-			item.classList.remove('active');
-		});
-		// mainItemFirst.forEach(item => {
-		// 	item.style.height = '0px';
-		// 	item.classList.remove('active');
-		// });
-		
-	};
+
 	const addAccordion = (target) => {
 		if (target.tagName === 'A' || target.tagName === 'H3') {
 			target = target.parentElement;
@@ -29,16 +18,11 @@ const headerAccordionBtn = () => {
 				}
 				const child = pp.childNodes[1];
 				if (item.classList.contains('active')) {
-					acardeon();
+					accordion();
 				} else {
-					acardeon();
+					accordion();
 					item.classList.add('active');
-					// console.log('item: ', item);
 					item.style.height  = child.offsetHeight + 'px';
-					// if (item.classList.contains('header__item-lasts')) {
-					// } else {
-					// 	item.style.height  = child.offsetHeight + 'px';
-					// }
 				}
 			} 
 		});
@@ -52,14 +36,6 @@ const headerAccordionBtn = () => {
 		if (target.matches('.header__popup-link-first-accordion')) {
 			addAccordion(target);
 		}
-		if (target.closest('.header__items-last-theory')) {
-			[...headerItemsLastTheory.children].forEach((item, index) =>  {
-				if (item === target.parentElement || item === target) {
-					addActiveClass(mainWrapTheory, index, 'main__items-active');
-					removePopup();
-				};
-			});
-		};
 	});
 }
 
