@@ -173,3 +173,10 @@
 
 .main__wrap-active {
 }
+
+@media (max-width: 768px) {
+	.main { 
+		margin-top: 112px;
+		// display: none;
+	}
+}

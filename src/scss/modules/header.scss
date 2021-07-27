@@ -145,6 +145,13 @@
 	}
 }
 @media (max-width: 768px) {
+	.header {
+	position: fixed;
+	width: 100%;
+	}
+	.header__wrapper {
+		border-radius: 0;
+	}
 	.header__nav {
 		display: none;
 	}
