@@ -25,9 +25,6 @@ const headerAccordionBtn = () => {
 	
 	headerPopupNav.addEventListener('click', (event) => {
 		const target = event.target;
-		// if (target.matches('.header__popup-item-first-accordion')) {
-		// 	addAccordion(target);
-		// }
 		if (target.matches('.header__popup-link-first-accordion')) {
 			target.nextElementSibling.classList.add('header__popup-item-lasts-active');
 			addAccordion();

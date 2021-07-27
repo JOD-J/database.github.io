@@ -1,6 +1,9 @@
 .aside {
 	margin: 32px 10px 0 0;
 }
+.aside__none {
+	display: none;
+}
 .aside__container {
 	display: grid;
 	grid-template-columns: auto 1fr;

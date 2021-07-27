@@ -18,7 +18,29 @@
 	}
 }
 
+.body__main__work {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas: " header header" "main main" "footer footer";
+	.header {
+		grid-area: header;
+	}
+	.aside {
+		display: none;
+	}
+	.main {
+		grid-area: main;
+	}
+	.footer {
+		grid-area: footer;
+	}
+}
+
 @media (max-width: 768px) {
+	// .body__main__work { 
+	// 	display: none;
+	// }
 	.body {
 		display: grid;
 		grid-template-columns:  1fr;

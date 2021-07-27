@@ -38,23 +38,24 @@ const headerAddClass = () => {
 	//============================================\\\\\aside===========================================
 	
 	//=================================================main===========================================
-	// const mainWrapperElem = document.querySelector('.main__wrapper');
+	const mainElem = document.querySelector('.main');
+	const mainWrapperElem = document.querySelector('.main__wrapper');
 	
-	// const mainWrapMainElem = document.querySelector('.main__wrap-main');
+	const mainWrapMainElem = document.querySelector('.main__wrap-main');
 	
-	// const mainWrapAnnexesElem = document.querySelector('.main__wrap-annexes');
+	const mainWrapAnnexesElem = document.querySelector('.main__wrap-annexes');
 	
-	// const mainWrapTheoryElem = document.querySelector('.main__wrap-theory');
+	const mainWrapTheoryElem = document.querySelector('.main__wrap-theory');
 	// const mainBoxTheoryHtmlElem = document.querySelector('.main__box-theory-html');
 	// const mainBoxTheoryCssElem = document.querySelector('.main__box-theory-css');
 	// const mainBoxTheoryJsElem = document.querySelector('.main__box-theory-js');
 	
-	// const mainWrapPaktikaElem = document.querySelector('.main__wrap-paktika');
+	const mainWrapPaktikaElem = document.querySelector('.main__wrap-paktika');
 	// const mainBoxPaktikaHtmlElem = document.querySelector('.main__box-paktika-html');
 	// const mainBoxPaktikaCssElem = document.querySelector('.main__box-paktika-css');
 	// const mainBoxPaktikaJsElem = document.querySelector('.main__box-paktika-js');
 	
-	// const mainWrapWorkElem = document.querySelector('.main__wrap-work');
+	const mainWrapWorkElem = document.querySelector('.main__wrap-work');
 	
 	
 	//============================================\\\\\main===========================================
@@ -120,8 +121,8 @@ const headerAddClass = () => {
 				};
 			});
 		};
-	
-	
+
+
 		if (target.closest('.aside__items-html-theory')) {
 			[...asideItemsHtmlTheoryElem.children].forEach((item, index) =>  {
 				item.classList.remove('aside__item-html-active');
@@ -149,8 +150,8 @@ const headerAddClass = () => {
 				};
 			});
 		};
-	
-	
+
+
 		if (target.closest('.aside__items-html-paktika')) {
 			[...asideItemsHtmlPaktikaElem.children].forEach((item, index) =>  {
 				item.classList.remove('aside__item-html-active');
@@ -179,7 +180,8 @@ const headerAddClass = () => {
 			});
 		};
 	});
-	
+
+
 	bodyElem.addEventListener('click', (event) => {
 		const target = event.target;
 
@@ -199,7 +201,7 @@ const headerAddClass = () => {
 					addActiveClass(asideItemsGithubElem, 0, 'aside__item-github-active');
 					addActiveClass(asideWrapperElem, 0, 'aside__nav-active');
 					
-					// addActiveClass(mainWrapperElem, 1, 'main__wrap-active');
+					addActiveClass(mainWrapperElem, 1, 'main__wrap-active');
 					// addActiveClass(mainWrapAnnexesElem, index, 'main__box-annexes-active');
 				};
 			});
@@ -215,10 +217,11 @@ const headerAddClass = () => {
 			// 		// addActiveClass(mainWrapAnnexesElem, index, 'main__box-annexes-active');
 			// 	};
 			// });
-			// mainWrapWorkElem.classList.remove('main__wrap-work-active');
-			// asideElem.classList.remove('aside-none');
-			// bodyElem.classList.remove('body1');
-			// mainWrapMainElem.classList.remove('main__wrap-main-active');
+			bodyElem.classList.remove('body__main__work');
+			mainWrapMainElem.classList.remove('main__wrap-main-active');
+			mainWrapWorkElem.classList.remove('main__wrap-work-active');
+			asideElem.classList.remove('aside__none');
+			mainElem.classList.remove('main__top');
 			removePopup();
 		};
 		if (target.closest('.header__items-last-theory') || target.closest('.header__popup-items-last-theory')) {
@@ -237,19 +240,19 @@ const headerAddClass = () => {
 					addActiveClass(asideItemsJsTheoryElem, 0, 'aside__item-js-active');
 					addActiveClass(asideWrapperElem, 1, 'aside__nav-active');
 	
-					// addActiveClass(mainWrapperElem, 2, 'main__wrap-active');
+					addActiveClass(mainWrapperElem, 2, 'main__wrap-active');
 					// addActiveClass(mainWrapTheoryElem, index, 'main__box-theory-active');
 					// addActiveClass(mainBoxTheoryHtmlElem, 0, 'main__inner-theory-html-active');
 					// addActiveClass(mainBoxTheoryCssElem, 0, 'main__inner-theory-css-active');
 					// addActiveClass(mainBoxTheoryJsElem, 0, 'main__inner-theory-js-active');
 				};
 			});
-			// mainWrapWorkElem.classList.remove('main__wrap-work-active');
-			// asideElem.classList.remove('aside-none');
-			// bodyElem.classList.remove('body1');
-			// mainWrapMainElem.classList.remove('main__wrap-main-active');
+			bodyElem.classList.remove('body__main__work');
+			mainWrapMainElem.classList.remove('main__wrap-main-active');
+			mainWrapWorkElem.classList.remove('main__wrap-work-active');
+			asideElem.classList.remove('aside__none');
+			mainElem.classList.remove('main__top');
 			removePopup();
-
 		};
 		if (target.closest('.header__items-last-paktika') || target.closest('.header__popup-items-last-paktika')) {
 			if (target.closest('.header__items-last-paktika')) {
@@ -267,40 +270,47 @@ const headerAddClass = () => {
 					addActiveClass(asideItemsJsPaktikaElem, 0, 'aside__item-js-active');
 					addActiveClass(asideWrapperElem, 2, 'aside__nav-active');
 	
-					// addActiveClass(mainWrapperElem, 3, 'main__wrap-active');
+					addActiveClass(mainWrapperElem, 3, 'main__wrap-active');
 					// addActiveClass(mainWrapPaktikaElem, index, 'main__box-paktika-active');
 					// addActiveClass(mainBoxPaktikaHtmlElem, 0, 'main__inner-paktika-html-active');
 					// addActiveClass(mainBoxPaktikaCssElem, 0, 'main__inner-paktika-css-active');
 					// addActiveClass(mainBoxPaktikaJsElem, 0, 'main__inner-paktika-js-active');
 				};
 			});
-			// mainWrapWorkElem.classList.remove('main__wrap-work-active');
-			// asideElem.classList.remove('aside-none');
-			// bodyElem.classList.remove('body1');
-			// mainWrapMainElem.classList.remove('main__wrap-main-active');
+			bodyElem.classList.remove('body__main__work');
+			mainWrapMainElem.classList.remove('main__wrap-main-active');
+			mainWrapWorkElem.classList.remove('main__wrap-work-active');
+			asideElem.classList.remove('aside__none');
+			mainElem.classList.remove('main__top');
 			removePopup();
-
 		};
-		if (target.closest('.header__item-first-work')) {
-			// mainWrapWorkElem.classList.add('main__wrap-work-active');
-			// bodyElem.classList.add('body1');
-			// asideElem.classList.add('aside-none');
-			// mainWrapAnnexesElem.classList.remove('main__wrap-active');
-			// mainWrapTheoryElem.classList.remove('main__wrap-active');
-			// mainWrapPaktikaElem.classList.remove('main__wrap-active');
-			// mainWrapMainElem.classList.remove('main__wrap-main-active');
+		if (target.closest('.header__item-first-work') || target.closest('.header__popup-item-first-work')) {
+			mainWrapWorkElem.classList.add('main__wrap-work-active');
+			bodyElem.classList.add('body__main__work');
+			asideElem.classList.add('aside__none');
+			mainElem.classList.add('main__top');
+			mainWrapAnnexesElem.classList.remove('main__wrap-active');
+			mainWrapTheoryElem.classList.remove('main__wrap-active');
+			mainWrapPaktikaElem.classList.remove('main__wrap-active');
+			mainWrapMainElem.classList.remove('main__wrap-main-active');
+			removePopup();
 		};
-		if (target.closest('.header__item-first-main')) {
-			// mainWrapMainElem.classList.add('main__wrap-main-active');
-			// bodyElem.classList.add('body1');
-			// asideElem.classList.add('aside-none');
-			// mainWrapAnnexesElem.classList.remove('main__wrap-active');
-			// mainWrapTheoryElem.classList.remove('main__wrap-active');
-			// mainWrapPaktikaElem.classList.remove('main__wrap-active');
-			// mainWrapWorkElem.classList.remove('main__wrap-work-active');
+		if (target.closest('.header__item-first-main') || target.closest('.header__popup-item-first-main')) {
+			mainWrapMainElem.classList.add('main__wrap-main-active');
+			bodyElem.classList.add('body__main__work');
+			asideElem.classList.add('aside__none');
+			mainElem.classList.add('main__top');
+			mainWrapAnnexesElem.classList.remove('main__wrap-active');
+			mainWrapTheoryElem.classList.remove('main__wrap-active');
+			mainWrapPaktikaElem.classList.remove('main__wrap-active');
+			mainWrapWorkElem.classList.remove('main__wrap-work-active');
+			removePopup();
 		}
 	});
-	
+	bodyElem.classList.add('body__main__work');
+	mainWrapMainElem.classList.add('main__wrap-main-active');
+	mainElem.classList.add('main__top');
+
 	// mainWrapMainElem.classList.add('main__wrap-main-active');
 	// mainWrapWorkElem.classList.add('main__wrap-work-active');
 	// mainWrapAnnexesElem.classList.remove('main__wrap-active');

@@ -11,7 +11,9 @@
 }
 
 
+
 .main__wrap-main {
+	display: none;
 }
 .main__box-main {
 }
@@ -24,6 +26,7 @@
 
 
 .main__wrap-annexes {
+	display: none;
 }
 .main__box-annexes-vsc {
 }
@@ -35,6 +38,7 @@
 }
 
 .main__wrap-theory {
+	display: none;
 }
 .main__nav-theory {
 }
@@ -104,7 +108,9 @@
 }
 .main__inner-theory-js-active {
 }
+
 .main__wrap-paktika {
+	display: none;
 }
 .main__box-paktika-html {
 }
@@ -148,7 +154,9 @@
 }
 .containeR__item-two {
 }
+
 .main__wrap-work {
+	display: none;
 }
 .main__box-works {
 }
@@ -169,14 +177,56 @@
 .main__inner-work-active {
 }
 
-
-
 .main__wrap-active {
+	display: block;
 }
+.main__wrap-main-active {
+	display: block;
+}
+.main__wrap-work-active {
+	display: block;
+}
+// .main__wrap-main-active {
+// 	display: block;
+// }
 
 @media (max-width: 768px) {
 	.main { 
+		// margin: auto;
 		margin-top: 112px;
-		// display: none;
+	}
+	.main__top {
+		margin-top: 80px;
+	}
+	.main__items-first-btn-burger {
+		display: block;
+		justify-content: right;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		background: transparent;
+		z-index: 2;
+		span {
+			position: absolute;
+			background-color: #fff;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			top: 9px;
+		}
+		&:before, &:after {
+			content: '';
+			background-color: #fff;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			left: 0;
+		};
+		&:before {
+			top: 3px;
+		};
+		&:after {
+			bottom: 3px;
+		};
 	}
 }
