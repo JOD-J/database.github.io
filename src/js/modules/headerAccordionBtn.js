@@ -12,8 +12,8 @@ const headerAccordionBtn = () => {
 					// console.log('item: ', item);
 					if (elem.parentElement.classList.contains('header__popup-item-lasts-active')) {
 						console.log('elem: ', elem);
-						console.log('item: ', item);
-						child = item.childNodes[1];
+						console.log('elem: ', elem);
+						child = elem;
 						console.log('child: ', child);
 						if (item.classList.contains('active')) {
 							accordion();
