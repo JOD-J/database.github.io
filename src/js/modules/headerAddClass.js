@@ -181,7 +181,14 @@ const headerAddClass = () => {
 	
 	bodyElem.addEventListener('click', (event) => {
 		const target = event.target;
+		// if (target.closest('.header__popup-link-first-accordion')) {
+		// 	// accordion();
+		// 	const child = target.parentElement.childNodes[3];
+		// 	child.classList.add('active')
+		// }
+		// if (target.closest('.header__popup-item-first-accordion')) {
 
+		// }
 		if (target.closest('.header__items-last-annexes') ||  target.closest('.header__popup-items-last-annexes')) {
 			if (target.closest('.header__items-last-annexes')) {
 				hedPop = headerItemslastAnnexesElem;

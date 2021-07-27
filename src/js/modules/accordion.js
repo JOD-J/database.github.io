@@ -6,6 +6,7 @@ const accordion = () => {
 	headerItemsLast.forEach(item => {
 		item.style.height = '0px';
 		item.classList.remove('active');
+		item.classList.remove('header__popup-item-lasts-active');
 	});
 	if (outerWidth <= 768) {
 	asideNavMain.style.height = '0px';

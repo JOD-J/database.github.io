@@ -6,9 +6,8 @@ const asideAccordionBtn = () => {
 	const addAccordion = () => {
 		[...asideWrapper.children].forEach(item => {
 			if (item.classList.contains('aside__nav-active') ) {
-				const pp = item;
 				let child;
-				[...pp.children].forEach(item => {
+				[...item.children].forEach(item => {
 					if (item.classList.contains('aside__items-active')) {
 						child = item;
 					};
