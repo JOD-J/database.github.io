@@ -36,7 +36,8 @@ module.exports = {
 		environment: {
 			// отключение стрелочных функций 
 			arrowFunction: false
-		}
+		},
+		assetModuleFilename: '[path][name].[ext]'
 	},
 	module: {
 		rules: [
@@ -66,6 +67,10 @@ module.exports = {
 					'css-loader',
 					'sass-loader'
 				]
+			},
+			{
+				test: /\.(png|jpg|jpeg|svg|gif)$/i,
+				type: 'asset'
 			}
 		]
 	},
